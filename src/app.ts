@@ -1,15 +1,19 @@
 import express from 'express';
+import {getAddresFromCity} from './addressConverter/addressConverter'
 
 export class echo{
     app:any = express();;
 
     constructor(){
-        // this.app = express();
     }    
 
     start(){
-        this.app.listen(3000, () => {
-            console.log("Server running on port 3000");
+        this.app.listen(3000, async () => {
+            let t = new getAddresFromCity();
+            t.get('Tel-Aviv',(err:any,response:any, body:any) => {
+                var bodyasjson = JSON.parse(body);
+                let res = bodyasjson.results[0].geometry.location;
+                })
            });
            
            this.app.get("/", function (req:any , res:any){
