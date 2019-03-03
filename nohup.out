@@ -1,0 +1,10 @@
+
+> echo-server@1.0.0 start /home/opc/echo-server
+> node ./app.js
+
+Server running on port 3000
+
+> echo-server@1.0.0 start /home/opc/echo-server
+> node ./app.js
+
+Server running on port 3000
