@@ -36,4 +36,6 @@ function EveryArticle(fromDate, toDate, language, sources, sortBy){
     });
 }
 
+module.exports = { EveryArticle, TopHeadlines};
+
 // TopHeadlines(category , language, country);
