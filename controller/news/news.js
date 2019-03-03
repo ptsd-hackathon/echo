@@ -7,4 +7,6 @@ var country = 'us';
 var formJson = {apiKey : KEY_API, country : country};
 var headers = {}
 
-sendReq.PostRequest(postUrl, formJson, headers);
+// sendReq.PostRequest(postUrl, formJson, headers);
+const NewsAPI = require('newsapi');
+const newsapi = new NewsAPI(KEY_API);
