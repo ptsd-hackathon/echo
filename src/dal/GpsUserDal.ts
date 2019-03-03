@@ -7,7 +7,14 @@ export default class GpsUserDal{
     }
 
     public addGpsUser(GpsUser: GpsUser) : void{
-        new GpsUserModel(GpsUser).save();
+        GpsUserModel.findOne({User: GpsUser.User},(err,found)=>{
+            if (err) {console.log("nosuchuser"); return;}
+            if(!found){console.log("nosuchuser"); return;}
+            found.Coord = GpsUser.Coord;
+            found.save();
+            console.log(found);
+        });
+        // new GpsUserModel({_id:"test"}).save();
     }
 
     
