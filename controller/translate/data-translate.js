@@ -1,5 +1,5 @@
-const KEY_API = require('../../data-const/post-consts').KEY_API;
-const HOST = require('../../data-const/post-consts').HOST;
+const KEY_API = require('../../data-const/post-consts').KEY_API_TRANSLATE;
+const HOST = require('../../data-const/post-consts').HOST_TRANSLATE;
 var sendReq = require('../post/sendReq');
 
 var postUrl = "https://" + HOST;
