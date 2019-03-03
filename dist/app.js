@@ -11,6 +11,7 @@ var config = require("../config.json");
 const body_parser_1 = __importDefault(require("body-parser"));
 const addressConverter_1 = require("./addressConverter/addressConverter");
 const GpsUser_1 = require("./dal/entities/GpsUser");
+const EventUser_1 = __importDefault(require("./dal/entities/EventUser"));
 class echo {
     constructor() {
         this.app = express_1.default();
@@ -34,6 +35,14 @@ class echo {
         this.app.post("/updateGpsUser", function (req, res) {
             new GpsUserDal_1.default().addGpsUser(new GpsUser_1.GpsUser(req.body.user, new Coord_1.default(req.body.coord.lat, req.body.coord.long), new Date()));
             res.sendStatus(200);
+        });
+        this.app.post("/events", function (req, res) {
+            var eventUser = new EventUser_1.default(req.body.user, req.body.eventId, req.body.date);
+            console.log("new event " + JSON.stringify(eventUser));
+            res.sendStatus(200);
+        });
+        this.app.delete("/events", function (req, res) {
+            res.send("Got delete request of id: " + req.body.eventId);
         });
     }
 }

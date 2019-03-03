@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 
 import { getAddresFromCity } from './addressConverter/addressConverter'
 import { GpsUser } from './dal/entities/GpsUser';
+import EventUser from './dal/entities/EventUser';
 
 export class echo {
     app: any = express();
@@ -35,6 +36,16 @@ export class echo {
         this.app.post("/updateGpsUser", function (req: any, res: any) {
             new GpsUserDal().addGpsUser(new GpsUser(req.body.user, new Coord(req.body.coord.lat, req.body.coord.long), new Date()));
             res.sendStatus(200);
+        });
+
+        this.app.post("/events", function(req: any, res: any){
+            var eventUser = new EventUser(req.body.user, req.body.eventId, req.body.date);
+            console.log("new event " + JSON.stringify(eventUser));
+            res.sendStatus(200);
+        });
+
+        this.app.delete("/events", function(req: any, res:any){
+            res.send("Got delete request of id: " + req.body.eventId);
         });
     }
 }
