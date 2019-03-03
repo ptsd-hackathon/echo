@@ -11,12 +11,14 @@ exports.CoordSchema = new mongoose_1.default.Schema({
 });
 exports.GpsUserSchema = new mongoose_1.default.Schema({
     User: { type: String, required: true },
-    Coord: { type: exports.CoordSchema, required: true }
+    Coord: { type: exports.CoordSchema, required: true },
+    LastUpdated: { type: Date, required: true }
 });
 class GpsUser {
-    constructor(User, Coord) {
+    constructor(User, Coord, LastUpdated) {
         this.User = User;
         this.Coord = Coord;
+        this.LastUpdated = LastUpdated;
     }
 }
 exports.GpsUser = GpsUser;

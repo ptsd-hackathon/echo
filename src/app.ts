@@ -33,7 +33,7 @@ export class echo {
         });
 
         this.app.post("/updateGpsUser", function (req: any, res: any) {
-            new GpsUserDal().addGpsUser(new GpsUser(req.body.user, new Coord(req.body.coord.lat, req.body.coord.long)));
+            new GpsUserDal().addGpsUser(new GpsUser(req.body.user, new Coord(req.body.coord.lat, req.body.coord.long), new Date()));
             res.sendStatus(200);
         });
     }

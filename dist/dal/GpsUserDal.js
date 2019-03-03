@@ -19,6 +19,7 @@ class GpsUserDal {
                 return;
             }
             found.Coord = GpsUser.Coord;
+            found.LastUpdated = new Date();
             found.save();
             console.log(found);
         });

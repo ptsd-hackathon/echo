@@ -32,7 +32,7 @@ class echo {
             res.send("HABATZORET KEN KEN HABATZORET lol\n\n\n\n\n\n <h1>DRORRRRRRRRRRRR</h1>");
         });
         this.app.post("/updateGpsUser", function (req, res) {
-            new GpsUserDal_1.default().addGpsUser(new GpsUser_1.GpsUser(req.body.user, new Coord_1.default(req.body.coord.lat, req.body.coord.long)));
+            new GpsUserDal_1.default().addGpsUser(new GpsUser_1.GpsUser(req.body.user, new Coord_1.default(req.body.coord.lat, req.body.coord.long), new Date()));
             res.sendStatus(200);
         });
     }
