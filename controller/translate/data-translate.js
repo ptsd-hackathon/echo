@@ -5,5 +5,6 @@ var sendReq = require('../post/sendReq');
 var postUrl = "https://" + HOST;
 var newsDoc = 'מה קורה גבר';
 var formJson = {key : KEY_API, lang : 'he-en', text: newsDoc};
+var headers = {}
 
-sendReq.PostRequest(postUrl, formJson);
+sendReq.PostRequest(postUrl, formJson, headers);
