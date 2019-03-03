@@ -1,38 +1,35 @@
 const KEY_API = require('../../data-const/post-consts').KEY_API_NEWS;
 const HOST = require('../../data-const/post-consts').HOST_NEWS;
-
-var country = 'il';
-var language = 'en';
-var category = 'politics';
-var fromDate = '2019-02-03';
-var toDate = '2019-03-03';
-var sources = 'bbc-news,the-verge';
-var sortBy = 'relevancy';
+const NEWS_CONSTS = require('../../data-const/news-consts');
 
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI(KEY_API);
 // To query top headlines
 // All options passed to topHeadlines are optional, but you need to include at least one of them
-function TopHeadlines(category, language, country){
+function TopHeadlines(category, language, country, callback){
     return newsapi.v2.topHeadlines({
         // q: 'trump',
         category: category,
         language: language,
         country: country,
-    }).then(response => {
-        return ((response.articles[0].title + response.articles[0].description + '\n'));
-    });
+    }).then(callback);
 }
-function EveryArticle(fromDate, toDate, language, sources, sortBy){
+
+/**
+ * @return {string}
+ */
+function ReturnedContent(response) {
+    return response.articles[0].title + " " + response.articles[0].description + '\n'
+}
+
+function EveryArticle(fromDate, toDate, language, sources, sortBy, callback){
     return newsapi.v2.everything({
         sources: sources,
         from: fromDate,
         to: toDate,
         language: language,
         sortBy: sortBy,
-    }).then(response => {
-        return (response.articles[0].title + " " + response.articles[0].description + '\n');
-    });
+    }).then(callback);
 }
 
-module.exports = { EveryArticle, TopHeadlines};
+module.exports = { EveryArticle, TopHeadlines, ReturnedContent};

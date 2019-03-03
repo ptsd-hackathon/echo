@@ -2,7 +2,7 @@ var express = require("express");
 var news = require("./controller/news/news");
 var app = express();
 app.listen(3000, () => {
- console.log("Server running on port 3000");
+    console.log("Server running on port 3000");
 });
 
 app.get("/", function (req, res){
@@ -10,6 +10,8 @@ app.get("/", function (req, res){
 })
 
 app.get("/newsJson", function(req, res){
-    res.send(news.TopHeadlines('politics' , 'en', 'us'));
-
+    news.TopHeadlines('politics' , 'en', 'us', next => {
+        res.send(news.ReturnedContent(next));
+        }
+    );
 })
