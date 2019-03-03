@@ -8,7 +8,8 @@ export interface ICoord {
 
 export interface IGpsUser extends mongoose.Document {
     User: string; 
-    Coord: ICoord; 
+    Coord: ICoord;
+    LastUpdated: Date;
   };
 
   
@@ -19,16 +20,19 @@ export const CoordSchema = new mongoose.Schema({
 
 export const GpsUserSchema = new mongoose.Schema({
   User: {type:String, required: true},
-  Coord: {type:CoordSchema, required: true}
+  Coord: {type:CoordSchema, required: true},
+  LastUpdated: {type:Date, required: true}
 });
 
 export class GpsUser {
   User: string
   Coord: ICoord
+  LastUpdated: Date;
   
-  constructor(User: string, Coord: Coord){
+  constructor(User: string, Coord: Coord, LastUpdated: Date){
     this.User = User;
     this.Coord = Coord;
+    this.LastUpdated = LastUpdated;
   }
 }
   
