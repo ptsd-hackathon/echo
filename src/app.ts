@@ -13,7 +13,7 @@ export class echo{
            });
            
            this.app.get("/", function (req:any , res:any){
-               res.send("HABATZORET KEN KEN HABATZORET\n\n\n\n\n\n <h1>DRORRRRRRRRRRRR</h1>");
+               res.send("HABATZORET KEN KEN HABATZORET lol\n\n\n\n\n\n <h1>DRORRRRRRRRRRRR</h1>");
            })           
     }
 

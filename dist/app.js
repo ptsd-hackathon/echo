@@ -15,7 +15,7 @@ class echo {
             console.log("Server running on port 3000");
         });
         this.app.get("/", function (req, res) {
-            res.send("HABATZORET KEN KEN HABATZORET\n\n\n\n\n\n <h1>DRORRRRRRRRRRRR</h1>");
+            res.send("HABATZORET KEN KEN HABATZORET lol\n\n\n\n\n\n <h1>DRORRRRRRRRRRRR</h1>");
         });
     }
 }
