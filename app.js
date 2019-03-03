@@ -10,6 +10,6 @@ app.get("/", function (req, res){
 })
 
 app.get("/newsJson", function(req, res){
-    news.TopHeadlines(category , language, country);
+    res.send(news.TopHeadlines('politics' , 'en', 'us'));
 
 })
