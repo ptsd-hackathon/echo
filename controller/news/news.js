@@ -36,4 +36,4 @@ function EveryArticle(fromDate, toDate, language, sources, sortBy){
     });
 }
 
-TopHeadlines(category , language, country);
+// TopHeadlines(category , language, country);
