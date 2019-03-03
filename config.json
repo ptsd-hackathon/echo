@@ -1,0 +1,3 @@
+{
+    "mongo": "mongodb://echousr:echousr@132.145.145.146/echo_db"
+}

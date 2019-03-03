@@ -1,9 +1,9 @@
-export class Coord{
-    lat: string;
-    long:string;
+export default class Coord{
+    Lat: string;
+    Long:string;
 
     constructor(Lat: string, Long: string){
-        this.lat = Lat;
-        this.long = Long;
+        this.Lat = Lat;
+        this.Long = Long;
     }
 } 
