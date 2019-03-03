@@ -1,10 +1,12 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import GpsUserDal from './dal/GpsUserDal';
+import Coord from "./dal/entities/Coord"
 var config = require("../config.json")
 import bodyParser from "body-parser";
 
 import { getAddresFromCity } from './addressConverter/addressConverter'
+import { GpsUser } from './dal/entities/GpsUser';
 
 export class echo {
     app: any = express();
@@ -31,7 +33,7 @@ export class echo {
         });
 
         this.app.post("/updateGpsUser", function (req: any, res: any) {
-            new GpsUserDal().addGpsUser(req.body);
+            new GpsUserDal().addGpsUser(new GpsUser(req.body.user, new Coord(req.body.coord.lat, req.body.coord.long)));
             res.sendStatus(200);
         });
     }

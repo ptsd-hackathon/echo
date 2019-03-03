@@ -6,9 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const GpsUserDal_1 = __importDefault(require("./dal/GpsUserDal"));
+const Coord_1 = __importDefault(require("./dal/entities/Coord"));
 var config = require("../config.json");
 const body_parser_1 = __importDefault(require("body-parser"));
 const addressConverter_1 = require("./addressConverter/addressConverter");
+const GpsUser_1 = require("./dal/entities/GpsUser");
 class echo {
     constructor() {
         this.app = express_1.default();
@@ -29,8 +31,8 @@ class echo {
         this.app.get("/", function (req, res) {
             res.send("HABATZORET KEN KEN HABATZORET lol\n\n\n\n\n\n <h1>DRORRRRRRRRRRRR</h1>");
         });
-        this.app.post("/updateGpsUsers", function (req, res) {
-            new GpsUserDal_1.default().addGpsUser(req.body);
+        this.app.post("/updateGpsUser", function (req, res) {
+            new GpsUserDal_1.default().addGpsUser(new GpsUser_1.GpsUser(req.body.user, new Coord_1.default(req.body.coord.lat, req.body.coord.long)));
             res.sendStatus(200);
         });
     }

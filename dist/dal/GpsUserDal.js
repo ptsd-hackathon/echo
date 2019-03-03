@@ -14,14 +14,14 @@ class GpsUserDal {
                 return;
             }
             if (!found) {
-                console.log("nosuchuser");
+                new GpsUser_1.default(GpsUser).save();
+                console.log("new user registerd");
                 return;
             }
             found.Coord = GpsUser.Coord;
             found.save();
             console.log(found);
         });
-        // new GpsUserModel({_id:"test"}).save();
     }
 }
 exports.default = GpsUserDal;
