@@ -7,4 +7,7 @@ var newsDoc = 'מה קורה גבר';
 var formJson = {key : KEY_API, lang : 'he-en', text: newsDoc};
 var headers = {}
 
+/**
+ * sending post request
+ */
 sendReq.PostRequest(postUrl, formJson, headers);
