@@ -24,6 +24,9 @@ class GpsUserDal {
             console.log(found);
         });
     }
+    getGpsUsers(callback) {
+        GpsUser_1.default.find({}, callback);
+    }
 }
 exports.default = GpsUserDal;
 //# sourceMappingURL=GpsUserDal.js.map

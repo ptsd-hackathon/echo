@@ -13,6 +13,7 @@ const nlp = require('../controller/nlp/nlp');
 import { getAddresFromCity } from './addressConverter/addressConverter'
 import { GpsUser } from './dal/entities/GpsUser';
 import EventUser from './dal/entities/EventUser';
+import PollNewsGps from './gpsUserPol/PollNewsGps';
 
 export class echo {
     app: any = express();
@@ -20,6 +21,9 @@ export class echo {
     constructor() {
         mongoose.connect(config.mongo, { useNewUrlParser: true });
         this.initSchema();
+        console.log("hello");
+        new PollNewsGps(30000);
+        console.log("fsdsado");
     }
 
     initSchema() {
@@ -57,10 +61,10 @@ export class echo {
             var textToTranslate, translatedText;
             news.EveryArticle(NEWS_CONSTS.fromDate, NEWS_CONSTS.toDate, NEWS_CONSTS.language, NEWS_CONSTS.sources, NEWS_CONSTS.sortBy, next => {
                 textToTranslate = news.ReturnedContent(next);
-                console.log(textToTranslate);
+                // console.log(textToTranslate);
                 translator.TranslateHeToEn(textToTranslate, (translatorErr: any, translatorRes: any, translatorBody: any) => {
                     translatedText = (JSON.parse(translatorBody).text[0]);
-                    console.log(translatedText)
+                    // console.log(translatedText)
                     nlp.GetLocationFromMetadata(translatedText, value => {
                         let mashu = []
                         for (let i = 0; i < value.response.entities.length; i++) {
@@ -69,7 +73,7 @@ export class echo {
                             }
                            
                         }
-                        console.log(mashu);
+                        // console.log(mashu);
                         res.send(mashu);
                     });
                 });
