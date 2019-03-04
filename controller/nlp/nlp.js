@@ -24,7 +24,7 @@ function getRootOfSentence(content,options) {
 
 }
 
-function getLocationFromMetadata(content) {
+function GetLocationFromMetadata(content) {
     return textRazor.exec(content, this.options)
         .then(value => {
             let mashu = [];
@@ -35,7 +35,7 @@ function getLocationFromMetadata(content) {
                     // if(value.response.entities[i].type.indexOf("Place") > -1){
                     //     mashu.push(value.response.sentences[i].words[j].token);
                     // }
-                    if(value.response.entities[i].type.indexOf("City") > -1){
+                    if(value.response.entities[i].type.indexOf("Place") > -1){
                         mashu.push(value.response.entities[i].entityId);
                     }
                 // }
@@ -47,7 +47,8 @@ function getLocationFromMetadata(content) {
         .catch(err => console.error(err))
 }
 
+module.exports = {GetLocationFromMetadata};
 
-getLocationFromMetadata("hello, my name is Tel-Aviv").then(answer => {
-    console.log(answer);
-});
+// getLocationFromMetadata("hello, my name is Tel-Aviv").then(answer => {
+//     console.log(answer);
+// });

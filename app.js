@@ -3,6 +3,7 @@ var news = require("./controller/news/news");
 var translator = require("./controller/translate/data-translate");
 const HOST_TRANSLATE = require('./data-const/post-consts').HOST_TRANSLATE;
 const NEWS_CONSTS = require('./data-const/news-consts');
+const nlp = require('./controller/nlp/nlp');
 var app = express();
 
 app.listen(3000, () => {
@@ -18,9 +19,10 @@ app.get("/newsJson", function(req, res){
     news.EveryArticle(NEWS_CONSTS.fromDate, NEWS_CONSTS.toDate, NEWS_CONSTS.language, NEWS_CONSTS.sources, NEWS_CONSTS.sortBy, next => {
         textToTranslate = news.ReturnedContent(next);
         translator.TranslateHeToEn(textToTranslate, (translatorErr, translatorRes, translatorBody) => {
-            res.send((JSON.parse(translatorBody).text[0]));
+            translatedText = (JSON.parse(translatorBody).text[0]);
+            res.send(nlp.GetLocationFromMetadata(translatedText));
         });
+
         }
     );
-
 })
