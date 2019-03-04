@@ -1,58 +1,30 @@
-// import { GoogleCalendar } from "./google-calendar-reader";
-import { getCriticalEvents } from "./google-calendar-reader";
+import { getCalendars } from "./google-calendar-reader";
+const CONFIG = require("./calendar-config");
 
-function startCheckingForEvents() {
-  let criticEve = getCriticalEvents();
-  let eventsToSend: any[] = [];
-  criticEve.forEach(eve => {
-    eve.then((x: any) => {
-      
-    for (let index = 0; index < x.length; index++) {
-      const event = x[index];
-      let eventData;
-      if (event.creator.email == "ptsd.echo@gmail.com") {
-         eventData = {
-          "eventName": event.summary,
-          "eventType": "אישיים",
-          "startDate": event.start.dateTime,
-          "endDate": event.end.dateTime
-        }
-      } else {
-         eventData = {
-          "eventName": event.summary,
-          "eventType": event.creator.displayName,
-          "startDate": event.start.date,
-          "endDate": event.end.date
-        }
-      }
-          eventsToSend.push(eventData);
+const EVENT_TYPE_ENUM = {
+  PERSONAL: 0,
+  PUBLIC: 1
+};
 
-    }
-      console.log(eventsToSend);
+const nextDayEventsParams = {
+  timeMin: new Date().toISOString(),
+  timeMax: new Date(new Date().setDate(new Date().getDate() + 1)).toISOString(),
+  singleEvents: true,
+  orderBy: "startTime"
+};
+
+export async function startCheckingForEvents() {
+  let calendars = await Promise.all(getCalendars());
+  let allEvents: any[] = [];
+  calendars.forEach(calendar => {
+    calendar.forEach((event: any) => {
+      allEvents.push({
+        summary: event.summary,
+        startDate: new Date(event.start.dateTime ? event.start.dateTime : event.start.date),
+        endDate: new Date(event.end.dateTime ? event.end.dateTime : event.end.date),
+        isPrivate: event.creator.email === CONFIG.primaryCreatorEmail
+      });
     });
   });
+  return allEvents;
 }
-
-// function startCheckingForEvents() {
-//   let calendarEvents: String[] = [];
-//   let callback = (err: any, res: any) => {
-//     if (err) {
-//       console.log("The API returned an error: " + err);
-//       return;
-//     }
-//     const events = res.data.items;
-//     if (events.length) {
-//       console.log("tomorrow:");
-//       events.map((event: any) => {
-//         const start = event.start.dateTime || event.start.date;
-//         calendarEvents.push(`${start} - ${event.summary}`);
-//       });
-//       console.log(calendarEvents);
-//     } else {
-//       console.log("No upcoming events found.");
-//     }
-//   };
-//   new GoogleCalendar().listEvents(callback);
-// }
-
-setInterval(startCheckingForEvents, 10000);

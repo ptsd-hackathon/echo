@@ -68,19 +68,12 @@ let nextDayEventsParams = {
     singleEvents: true,
     orderBy: "startTime"
 };
-function getCriticalEvents() {
+function getCalendars() {
     var promises = [];
     CONFIG.calendarId.forEach((calendar) => {
         promises.push(CalendarAPI.Events.list(calendar, nextDayEventsParams));
     });
     return promises;
 }
-exports.getCriticalEvents = getCriticalEvents;
-// .then((json: any) => {
-//     console.log(json);
-//     poop.push(json.getivents in json);
-//   })
-//   .catch((err: any) => {
-//     console.log(err);
-//   });
+exports.getCalendars = getCalendars;
 //# sourceMappingURL=google-calendar-reader.js.map

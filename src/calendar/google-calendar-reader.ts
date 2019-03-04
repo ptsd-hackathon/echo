@@ -73,18 +73,10 @@ let nextDayEventsParams = {
   orderBy: "startTime"
 };
 
-export function getCriticalEvents() {
+export function getCalendars() {
   var promises: any[] = [];
   CONFIG.calendarId.forEach((calendar: any) => {
     promises.push(CalendarAPI.Events.list(calendar, nextDayEventsParams));
   });
   return promises;
 }
-
-// .then((json: any) => {
-//     console.log(json);
-//     poop.push(json.getivents in json);
-//   })
-//   .catch((err: any) => {
-//     console.log(err);
-//   });

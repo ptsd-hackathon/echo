@@ -1,57 +1,41 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-// import { GoogleCalendar } from "./google-calendar-reader";
 const google_calendar_reader_1 = require("./google-calendar-reader");
+const CONFIG = require("./calendar-config");
+const EVENT_TYPE_ENUM = {
+    PERSONAL: 0,
+    PUBLIC: 1
+};
+const nextDayEventsParams = {
+    timeMin: new Date().toISOString(),
+    timeMax: new Date(new Date().setDate(new Date().getDate() + 1)).toISOString(),
+    singleEvents: true,
+    orderBy: "startTime"
+};
 function startCheckingForEvents() {
-    let criticEve = google_calendar_reader_1.getCriticalEvents();
-    let eventsToSend = [];
-    criticEve.forEach(eve => {
-        eve.then((x) => {
-            for (let index = 0; index < x.length; index++) {
-                const event = x[index];
-                let eventData;
-                if (event.creator.email == "ptsd.echo@gmail.com") {
-                    eventData = {
-                        "eventName": event.summary,
-                        "eventType": "אישיים",
-                        "startDate": event.start.dateTime,
-                        "endDate": event.end.dateTime
-                    };
-                }
-                else {
-                    eventData = {
-                        "eventName": event.summary,
-                        "eventType": event.creator.displayName,
-                        "startDate": event.start.date,
-                        "endDate": event.end.date
-                    };
-                }
-                eventsToSend.push(eventData);
-            }
-            console.log(eventsToSend);
+    return __awaiter(this, void 0, void 0, function* () {
+        let calendars = yield Promise.all(google_calendar_reader_1.getCalendars());
+        let allEvents = [];
+        calendars.forEach(calendar => {
+            calendar.forEach((event) => {
+                allEvents.push({
+                    summary: event.summary,
+                    startDate: new Date(event.start.dateTime ? event.start.dateTime : event.start.date),
+                    endDate: new Date(event.end.dateTime ? event.end.dateTime : event.end.date),
+                    isPrivate: event.creator.email === CONFIG.primaryCreatorEmail
+                });
+            });
         });
+        return allEvents;
     });
 }
-// function startCheckingForEvents() {
-//   let calendarEvents: String[] = [];
-//   let callback = (err: any, res: any) => {
-//     if (err) {
-//       console.log("The API returned an error: " + err);
-//       return;
-//     }
-//     const events = res.data.items;
-//     if (events.length) {
-//       console.log("tomorrow:");
-//       events.map((event: any) => {
-//         const start = event.start.dateTime || event.start.date;
-//         calendarEvents.push(`${start} - ${event.summary}`);
-//       });
-//       console.log(calendarEvents);
-//     } else {
-//       console.log("No upcoming events found.");
-//     }
-//   };
-//   new GoogleCalendar().listEvents(callback);
-// }
-setInterval(startCheckingForEvents, 10000);
+exports.startCheckingForEvents = startCheckingForEvents;
 //# sourceMappingURL=event-checker.js.map

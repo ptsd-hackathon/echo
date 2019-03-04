@@ -6,8 +6,10 @@ const CALENDAR_ID = ['ptsd.echo@gmail.com',
   encodeURIComponent('iw.christian#holiday@group.v.calendar.google.com')
 ];
 const TIMEZONE = 'UTC+02:00';
+const PRIMARY_CREATOR_EMAIL = 'ptsd.echo@gmail.com';
  
 module.exports.key = KEY;           //or if using json keys - module.exports.key = key; 
 module.exports.serviceAcctId = SERVICE_ACCT_ID;
 module.exports.calendarId = CALENDAR_ID;
 module.exports.timezone = TIMEZONE;
+module.exports.primaryCreatorEmail = PRIMARY_CREATOR_EMAIL;
