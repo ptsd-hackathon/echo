@@ -1,6 +1,8 @@
 var express = require("express");
 var news = require("./controller/news/news");
-const NEWS_CONSTS = require('../../data-const/news-consts');
+var translator = require("./controller/translate/data-translate");
+const HOST_TRANSLATE = require('./data-const/post-consts').HOST_TRANSLATE;
+const NEWS_CONSTS = require('./data-const/news-consts');
 var app = express();
 
 app.listen(3000, () => {
@@ -12,8 +14,14 @@ app.get("/", function (req, res){
 })
 
 app.get("/newsJson", function(req, res){
-    news.TopHeadlines(NEWS_CONSTS.category, NEWS_CONSTS.language, NEWS_CONSTS.country, next => {
-        res.send(news.ReturnedContent(next));
+    var textToTranslate, translatedText;
+    news.EveryArticle(NEWS_CONSTS.fromDate, NEWS_CONSTS.toDate, NEWS_CONSTS.language, NEWS_CONSTS.sources, NEWS_CONSTS.sortBy, next => {
+        textToTranslate = news.ReturnedContent(next);
+        translator.TranslateHeToEn(textToTranslate, (translatorErr, translatorRes, translatorBody) => {
+            res.send((JSON.parse(translatorBody).text[0]));
+        });
+
         }
     );
+
 })

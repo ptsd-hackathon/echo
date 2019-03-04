@@ -1,9 +1,9 @@
 module.exports = Object.freeze({
     country: 'il',
-    language: 'en',
+    language: 'he',
     category: 'politics',
     fromDate: '2019-02-03',
     toDate: '2019-03-03',
-    sources: 'bbc-news,the-verge',
+    sources: 'google-news-is',
     sortBy: 'relevancy'
 })
