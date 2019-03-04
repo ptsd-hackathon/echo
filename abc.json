@@ -1,0 +1,1176 @@
+//{
+//  "response": {
+//    "sentences": [
+//      {
+//        "position": 0,
+//        "words": [
+//          {
+//            "position": 0,
+//            "startingPos": 0,
+//            "endingPos": 3,
+//            "stem": "the",
+//            "lemma": "the",
+//            "token": "The",
+//            "partOfSpeech": "DT",
+//            "parentPosition": 2,
+//            "relationToParent": "det"
+//          },
+//          {
+//            "position": 1,
+//            "startingPos": 4,
+//            "endingPos": 11,
+//            "stem": "feder",
+//            "lemma": "federal",
+//            "token": "Federal",
+//            "partOfSpeech": "NNP",
+//            "parentPosition": 2,
+//            "relationToParent": "nn"
+//          },
+//          {
+//            "position": 2,
+//            "startingPos": 12,
+//            "endingPos": 19,
+//            "stem": "reserv",
+//            "lemma": "reserve",
+//            "token": "Reserve",
+//            "partOfSpeech": "NNP",
+//            "parentPosition": 5,
+//            "relationToParent": "nsubj"
+//          },
+//          {
+//            "position": 3,
+//            "startingPos": 20,
+//            "endingPos": 22,
+//            "stem": "is",
+//            "lemma": "is",
+//            "token": "is",
+//            "partOfSpeech": "VBZ",
+//            "parentPosition": 5,
+//            "relationToParent": "cop"
+//          },
+//          {
+//            "position": 4,
+//            "startingPos": 23,
+//            "endingPos": 26,
+//            "stem": "the",
+//            "lemma": "the",
+//            "token": "the",
+//            "partOfSpeech": "DT",
+//            "parentPosition": 5,
+//            "relationToParent": "det"
+//          },
+//          {
+//            "position": 5,
+//            "startingPos": 27,
+//            "endingPos": 32,
+//            "stem": "enemi",
+//            "lemma": "enemy",
+//            "token": "enemy",
+//            "partOfSpeech": "NN"
+//          },
+//          {
+//            "position": 6,
+//            "startingPos": 33,
+//            "endingPos": 35,
+//            "stem": "of",
+//            "lemma": "of",
+//            "token": "of",
+//            "partOfSpeech": "IN",
+//            "parentPosition": 5,
+//            "relationToParent": "prep"
+//          },
+//          {
+//            "position": 7,
+//            "startingPos": 36,
+//            "endingPos": 39,
+//            "stem": "ron",
+//            "lemma": "ron",
+//            "token": "Ron",
+//            "partOfSpeech": "NNP",
+//            "parentPosition": 8,
+//            "relationToParent": "nn"
+//          },
+//          {
+//            "position": 8,
+//            "startingPos": 40,
+//            "endingPos": 44,
+//            "stem": "paul",
+//            "lemma": "paul",
+//            "token": "Paul",
+//            "partOfSpeech": "NNP",
+//            "parentPosition": 6,
+//            "relationToParent": "pobj"
+//          },
+//          {
+//            "position": 9,
+//            "startingPos": 44,
+//            "endingPos": 45,
+//            "stem": ".",
+//            "lemma": ".",
+//            "token": ".",
+//            "partOfSpeech": ".",
+//            "parentPosition": 5,
+//            "relationToParent": "punct"
+//          }
+//        ]
+//      }
+//    ],
+//    "coarseTopics": [
+//      {
+//        "id": 0,
+//        "label": "Politics",
+//        "wikiLink": "http://en.wikipedia.org/Category:Politics",
+//        "score": 1
+//      }
+//    ],
+//    "language": "eng",
+//    "languageIsReliable": true,
+//    "topics": [
+//      {
+//        "id": 0,
+//        "label": "Ron Paul",
+//        "wikiLink": "http://en.wikipedia.org/Category:Ron_Paul",
+//        "score": 0.9411,
+//        "wikidataId": "Q15257"
+//      },
+//      {
+//        "id": 1,
+//        "label": "American political people",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_political_people",
+//        "score": 0.5567
+//      },
+//      {
+//        "id": 2,
+//        "label": "American politicians",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_politicians",
+//        "score": 0.5235
+//      },
+//      {
+//        "id": 3,
+//        "label": "Politicians",
+//        "wikiLink": "http://en.wikipedia.org/Category:Politicians",
+//        "score": 0.3853,
+//        "wikidataId": "Q82955"
+//      },
+//      {
+//        "id": 4,
+//        "label": "Politics of the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Politics_of_the_United_States",
+//        "score": 0.3642,
+//        "wikidataId": "Q330963"
+//      },
+//      {
+//        "id": 5,
+//        "label": "Libertarian Party (United States) politicians",
+//        "wikiLink": "http://en.wikipedia.org/Category:Libertarian_Party_(United_States)_politicians",
+//        "score": 0.3454
+//      },
+//      {
+//        "id": 6,
+//        "label": "Non-interventionism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Non-interventionism",
+//        "score": 0.3234,
+//        "wikidataId": "Q1203128"
+//      },
+//      {
+//        "id": 7,
+//        "label": "People from Lake Jackson, Texas",
+//        "wikiLink": "http://en.wikipedia.org/Category:People_from_Lake_Jackson,_Texas",
+//        "score": 0.3091
+//      },
+//      {
+//        "id": 8,
+//        "label": "Republican Party (United States)",
+//        "wikiLink": "http://en.wikipedia.org/Category:Republican_Party_(United_States)",
+//        "score": 0.3066,
+//        "wikidataId": "Q29468"
+//      },
+//      {
+//        "id": 9,
+//        "label": "Texas Libertarians",
+//        "wikiLink": "http://en.wikipedia.org/Category:Texas_Libertarians",
+//        "score": 0.2912
+//      },
+//      {
+//        "id": 10,
+//        "label": "Politics",
+//        "wikiLink": "http://en.wikipedia.org/Category:Politics",
+//        "score": 0.2783,
+//        "wikidataId": "Q7163"
+//      },
+//      {
+//        "id": 11,
+//        "label": "Libertarian Party (United States) presidential nominees",
+//        "wikiLink": "http://en.wikipedia.org/Category:Libertarian_Party_(United_States)_presidential_nominees",
+//        "score": 0.2754
+//      },
+//      {
+//        "id": 12,
+//        "label": "Political theories",
+//        "wikiLink": "http://en.wikipedia.org/Category:Political_theories",
+//        "score": 0.2727,
+//        "wikidataId": "Q9357091"
+//      },
+//      {
+//        "id": 13,
+//        "label": "American libertarians",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_libertarians",
+//        "score": 0.2687
+//      },
+//      {
+//        "id": 14,
+//        "label": "Duke University School of Medicine alumni",
+//        "wikiLink": "http://en.wikipedia.org/Category:Duke_University_School_of_Medicine_alumni",
+//        "score": 0.2614
+//      },
+//      {
+//        "id": 15,
+//        "label": "Libertarian Party (United States)",
+//        "wikiLink": "http://en.wikipedia.org/Category:Libertarian_Party_(United_States)",
+//        "score": 0.26,
+//        "wikidataId": "Q558334"
+//      },
+//      {
+//        "id": 16,
+//        "label": "Monetary policy of the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Monetary_policy_of_the_United_States",
+//        "score": 0.2596,
+//        "wikidataId": "Q6899019"
+//      },
+//      {
+//        "id": 17,
+//        "label": "United States presidential candidates",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States_presidential_candidates_by_year",
+//        "score": 0.2523
+//      },
+//      {
+//        "id": 18,
+//        "label": "Monetary reformers",
+//        "wikiLink": "http://en.wikipedia.org/Category:Monetary_reformers",
+//        "score": 0.2487
+//      },
+//      {
+//        "id": 19,
+//        "label": "Legislative branch of the United States government",
+//        "wikiLink": "http://en.wikipedia.org/Category:Legislative_branch_of_the_United_States_government",
+//        "score": 0.244,
+//        "wikidataId": "Q10350681"
+//      },
+//      {
+//        "id": 20,
+//        "label": "Critics of neoconservatism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Critics_of_neoconservatism",
+//        "score": 0.2373
+//      },
+//      {
+//        "id": 21,
+//        "label": "Political ideologies",
+//        "wikiLink": "http://en.wikipedia.org/Category:Political_ideologies",
+//        "score": 0.2357,
+//        "wikidataId": "Q14934048"
+//      },
+//      {
+//        "id": 22,
+//        "label": "Classical liberalism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Classical_liberalism",
+//        "score": 0.235,
+//        "wikidataId": "Q794394"
+//      },
+//      {
+//        "id": 23,
+//        "label": "Federal Reserve System",
+//        "wikiLink": "http://en.wikipedia.org/Category:Federal_Reserve_System",
+//        "score": 0.227,
+//        "wikidataId": "Q53536"
+//      },
+//      {
+//        "id": 24,
+//        "label": "Christian libertarians",
+//        "wikiLink": "http://en.wikipedia.org/Category:Christian_libertarians",
+//        "score": 0.2269
+//      },
+//      {
+//        "id": 25,
+//        "label": "Right-wing politics",
+//        "wikiLink": "http://en.wikipedia.org/Category:Right-wing_politics",
+//        "score": 0.2256,
+//        "wikidataId": "Q76074"
+//      },
+//      {
+//        "id": 26,
+//        "label": "Members of the Libertarian Party (United States)",
+//        "wikiLink": "http://en.wikipedia.org/Category:Members_of_the_Libertarian_Party_(United_States)",
+//        "score": 0.2222,
+//        "wikidataId": "Q558334"
+//      },
+//      {
+//        "id": 27,
+//        "label": "United States presidential campaigns",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States_presidential_campaigns",
+//        "score": 0.218
+//      },
+//      {
+//        "id": 28,
+//        "label": "Christian libertarianism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Christian_libertarianism",
+//        "score": 0.2174,
+//        "wikidataId": "Q5110336"
+//      },
+//      {
+//        "id": 29,
+//        "label": "Macroeconomic policy",
+//        "wikiLink": "http://en.wikipedia.org/Category:Macroeconomic_policy",
+//        "score": 0.2109,
+//        "wikidataId": "Q11821836"
+//      },
+//      {
+//        "id": 30,
+//        "label": "Libertarianism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Libertarianism",
+//        "score": 0.2089,
+//        "wikidataId": "Q178598"
+//      },
+//      {
+//        "id": 31,
+//        "label": "Criticism of neoconservatism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Criticism_of_neoconservatism",
+//        "score": 0.2086
+//      },
+//      {
+//        "id": 32,
+//        "label": "Interest rates",
+//        "wikiLink": "http://en.wikipedia.org/Category:Interest_rates",
+//        "score": 0.2077,
+//        "wikidataId": "Q179179"
+//      },
+//      {
+//        "id": 33,
+//        "label": "Privacy activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:Privacy_activists",
+//        "score": 0.2005
+//      },
+//      {
+//        "id": 34,
+//        "label": "Government",
+//        "wikiLink": "http://en.wikipedia.org/Category:Government",
+//        "score": 0.1975,
+//        "wikidataId": "Q7188"
+//      },
+//      {
+//        "id": 35,
+//        "label": "United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States",
+//        "score": 0.1938,
+//        "wikidataId": "Q30"
+//      },
+//      {
+//        "id": 36,
+//        "label": "Agencies of the United States government",
+//        "wikiLink": "http://en.wikipedia.org/Category:Agencies_of_the_United_States_government",
+//        "score": 0.1863,
+//        "wikidataId": "Q20857065"
+//      },
+//      {
+//        "id": 37,
+//        "label": "Non-interventionist parties",
+//        "wikiLink": "http://en.wikipedia.org/Category:Non-interventionist_parties",
+//        "score": 0.184
+//      },
+//      {
+//        "id": 38,
+//        "label": "Central banks",
+//        "wikiLink": "http://en.wikipedia.org/Category:Central_banks",
+//        "score": 0.1831,
+//        "wikidataId": "Q66344"
+//      },
+//      {
+//        "id": 39,
+//        "label": "Members of the United States House of Representatives",
+//        "wikiLink": "http://en.wikipedia.org/Category:Members_of_the_United_States_House_of_Representatives",
+//        "score": 0.181,
+//        "wikidataId": "Q13218630"
+//      },
+//      {
+//        "id": 40,
+//        "label": "Tea Party movement",
+//        "wikiLink": "http://en.wikipedia.org/Category:Tea_Party_movement",
+//        "score": 0.1795,
+//        "wikidataId": "Q19042"
+//      },
+//      {
+//        "id": 41,
+//        "label": "Drug policy reform activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:Drug_policy_reform_activists",
+//        "score": 0.1734
+//      },
+//      {
+//        "id": 42,
+//        "label": "Tea Party movement activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:Tea_Party_movement_activists",
+//        "score": 0.1676
+//      },
+//      {
+//        "id": 43,
+//        "label": "Banks of the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Banks_of_the_United_States",
+//        "score": 0.167,
+//        "wikidataId": "Q4856361"
+//      },
+//      {
+//        "id": 44,
+//        "label": "Political movements",
+//        "wikiLink": "http://en.wikipedia.org/Category:Political_movements",
+//        "score": 0.1668,
+//        "wikidataId": "Q2738074"
+//      },
+//      {
+//        "id": 45,
+//        "label": "Baptists from Texas",
+//        "wikiLink": "http://en.wikipedia.org/Category:Baptists_from_Texas",
+//        "score": 0.1622
+//      },
+//      {
+//        "id": 46,
+//        "label": "Operations of central banks",
+//        "wikiLink": "http://en.wikipedia.org/Category:Operations_of_central_banks",
+//        "score": 0.1609
+//      },
+//      {
+//        "id": 47,
+//        "label": "Candidates for President of the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Candidates_for_President_of_the_United_States",
+//        "score": 0.1588
+//      },
+//      {
+//        "id": 48,
+//        "label": "Anti-communism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Anti-communism",
+//        "score": 0.1538,
+//        "wikidataId": "Q182121"
+//      },
+//      {
+//        "id": 49,
+//        "label": "Organizations that support same-sex marriage",
+//        "wikiLink": "http://en.wikipedia.org/Category:Organizations_that_support_same-sex_marriage",
+//        "score": 0.151
+//      },
+//      {
+//        "id": 50,
+//        "label": "Critics of Marxism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Critics_of_Marxism",
+//        "score": 0.149
+//      },
+//      {
+//        "id": 51,
+//        "label": "Anti-Marxism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Anti-Marxism",
+//        "score": 0.1486
+//      },
+//      {
+//        "id": 52,
+//        "label": "Monopolies",
+//        "wikiLink": "http://en.wikipedia.org/Category:Monopolies",
+//        "score": 0.1481
+//      },
+//      {
+//        "id": 53,
+//        "label": "Drug policy reform",
+//        "wikiLink": "http://en.wikipedia.org/Category:Drug_policy_reform",
+//        "score": 0.1477,
+//        "wikidataId": "Q5308916"
+//      },
+//      {
+//        "id": 54,
+//        "label": "Individualism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Individualism",
+//        "score": 0.1454,
+//        "wikidataId": "Q171995"
+//      },
+//      {
+//        "id": 55,
+//        "label": "Monetary economics",
+//        "wikiLink": "http://en.wikipedia.org/Category:Monetary_economics",
+//        "score": 0.1438,
+//        "wikidataId": "Q10780084"
+//      },
+//      {
+//        "id": 56,
+//        "label": "People associated with movements",
+//        "wikiLink": "http://en.wikipedia.org/Category:People_associated_with_movements",
+//        "score": 0.1433
+//      },
+//      {
+//        "id": 57,
+//        "label": "International finance institutions",
+//        "wikiLink": "http://en.wikipedia.org/Category:International_finance_institutions",
+//        "score": 0.1394,
+//        "wikidataId": "Q1345691"
+//      },
+//      {
+//        "id": 58,
+//        "label": "Banknote issuers",
+//        "wikiLink": "http://en.wikipedia.org/Category:Banknote_issuers",
+//        "score": 0.1382
+//      },
+//      {
+//        "id": 59,
+//        "label": "American political activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_political_activists",
+//        "score": 0.1353
+//      },
+//      {
+//        "id": 60,
+//        "label": "Social ideologies",
+//        "wikiLink": "http://en.wikipedia.org/Category:Social_ideologies",
+//        "score": 0.1351
+//      },
+//      {
+//        "id": 61,
+//        "label": "Administrative law",
+//        "wikiLink": "http://en.wikipedia.org/Category:Administrative_law",
+//        "score": 0.1284,
+//        "wikidataId": "Q171251"
+//      },
+//      {
+//        "id": 62,
+//        "label": "United States economic policy",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States_economic_policy",
+//        "score": 0.1277
+//      },
+//      {
+//        "id": 63,
+//        "label": "Monetary policy",
+//        "wikiLink": "http://en.wikipedia.org/Category:Monetary_policy",
+//        "score": 0.1266,
+//        "wikidataId": "Q178476"
+//      },
+//      {
+//        "id": 64,
+//        "label": "American pro-life activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_pro-life_activists",
+//        "score": 0.1245
+//      },
+//      {
+//        "id": 65,
+//        "label": "November events",
+//        "wikiLink": "http://en.wikipedia.org/Category:November_events",
+//        "score": 0.1227
+//      },
+//      {
+//        "id": 66,
+//        "label": "Members of the United States Congress",
+//        "wikiLink": "http://en.wikipedia.org/Category:Members_of_the_United_States_Congress",
+//        "score": 0.1224
+//      },
+//      {
+//        "id": 67,
+//        "label": "Economic liberalism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Economic_liberalism",
+//        "score": 0.1223,
+//        "wikidataId": "Q2542563"
+//      },
+//      {
+//        "id": 68,
+//        "label": "Federalist parties",
+//        "wikiLink": "http://en.wikipedia.org/Category:Federalist_parties",
+//        "score": 0.1212
+//      },
+//      {
+//        "id": 69,
+//        "label": "Communism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Communism",
+//        "score": 0.1204,
+//        "wikidataId": "Q6186"
+//      },
+//      {
+//        "id": 70,
+//        "label": "Anti-abortion activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:Anti-abortion_activists",
+//        "score": 0.118
+//      },
+//      {
+//        "id": 71,
+//        "label": "Ideologies",
+//        "wikiLink": "http://en.wikipedia.org/Category:Ideologies",
+//        "score": 0.1178,
+//        "wikidataId": "Q7257"
+//      },
+//      {
+//        "id": 72,
+//        "label": "Banks",
+//        "wikiLink": "http://en.wikipedia.org/Category:Banks",
+//        "score": 0.1176,
+//        "wikidataId": "Q22687"
+//      },
+//      {
+//        "id": 73,
+//        "label": "American Baptists",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_Baptists_by_state",
+//        "score": 0.115
+//      },
+//      {
+//        "id": 74,
+//        "label": "United States House of Representatives",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States_House_of_Representatives",
+//        "score": 0.1131,
+//        "wikidataId": "Q11701"
+//      },
+//      {
+//        "id": 75,
+//        "label": "Libertarians",
+//        "wikiLink": "http://en.wikipedia.org/Category:Libertarians",
+//        "score": 0.1121,
+//        "wikidataId": "Q178598"
+//      },
+//      {
+//        "id": 76,
+//        "label": "Banking",
+//        "wikiLink": "http://en.wikipedia.org/Category:Banking",
+//        "score": 0.1109,
+//        "wikidataId": "Q3435731"
+//      },
+//      {
+//        "id": 77,
+//        "label": "United States administrative law",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States_administrative_law",
+//        "score": 0.1107,
+//        "wikidataId": "Q3039568"
+//      },
+//      {
+//        "id": 78,
+//        "label": "Independent agencies of the United States government",
+//        "wikiLink": "http://en.wikipedia.org/Category:Independent_agencies_of_the_United_States_government",
+//        "score": 0.11,
+//        "wikidataId": "Q1752939"
+//      },
+//      {
+//        "id": 79,
+//        "label": "American political candidates",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_political_candidates",
+//        "score": 0.1089
+//      },
+//      {
+//        "id": 80,
+//        "label": "Homeschooling advocates",
+//        "wikiLink": "http://en.wikipedia.org/Category:Homeschooling_advocates",
+//        "score": 0.1065
+//      },
+//      {
+//        "id": 81,
+//        "label": "Economy of the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Economy_of_the_United_States",
+//        "score": 0.1044,
+//        "wikidataId": "Q188540"
+//      },
+//      {
+//        "id": 82,
+//        "label": "Monetary reform",
+//        "wikiLink": "http://en.wikipedia.org/Category:Monetary_reform",
+//        "score": 0.1043,
+//        "wikidataId": "Q65224"
+//      },
+//      {
+//        "id": 83,
+//        "label": "Republican Party (United States) politicians",
+//        "wikiLink": "http://en.wikipedia.org/Category:Republican_Party_(United_States)_politicians",
+//        "score": 0.1039
+//      },
+//      {
+//        "id": 84,
+//        "label": "Government institutions",
+//        "wikiLink": "http://en.wikipedia.org/Category:Government_institutions",
+//        "score": 0.1003,
+//        "wikidataId": "Q2659904"
+//      },
+//      {
+//        "id": 85,
+//        "label": "Physicians from Texas",
+//        "wikiLink": "http://en.wikipedia.org/Category:Physicians_from_Texas",
+//        "score": 0.09899
+//      },
+//      {
+//        "id": 86,
+//        "label": "Government of the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Government_of_the_United_States",
+//        "score": 0.0981,
+//        "wikidataId": "Q48525"
+//      },
+//      {
+//        "id": 87,
+//        "label": "Anti–Iraq War activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:Anti–Iraq_War_activists",
+//        "score": 0.09437
+//      },
+//      {
+//        "id": 88,
+//        "label": "People associated with events",
+//        "wikiLink": "http://en.wikipedia.org/Category:People_associated_with_events",
+//        "score": 0.09292
+//      },
+//      {
+//        "id": 89,
+//        "label": "United States federal policy",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States_federal_policy",
+//        "score": 0.09267
+//      },
+//      {
+//        "id": 90,
+//        "label": "Republican Party members of the United States House of Representatives",
+//        "wikiLink": "http://en.wikipedia.org/Category:Republican_Party_members_of_the_United_States_House_of_Representatives",
+//        "score": 0.09218
+//      },
+//      {
+//        "id": 91,
+//        "label": "Republicans (United States)",
+//        "wikiLink": "http://en.wikipedia.org/Category:Republicans_(United_States)",
+//        "score": 0.09005
+//      },
+//      {
+//        "id": 92,
+//        "label": "American foreign policy writers",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_foreign_policy_writers",
+//        "score": 0.08798
+//      },
+//      {
+//        "id": 93,
+//        "label": "Public sphere",
+//        "wikiLink": "http://en.wikipedia.org/Category:Public_sphere",
+//        "score": 0.08709,
+//        "wikidataId": "Q17945"
+//      },
+//      {
+//        "id": 94,
+//        "label": "Social conservative parties",
+//        "wikiLink": "http://en.wikipedia.org/Category:Social_conservative_parties",
+//        "score": 0.08598
+//      },
+//      {
+//        "id": 95,
+//        "label": "Executive branch of the United States government",
+//        "wikiLink": "http://en.wikipedia.org/Category:Executive_branch_of_the_United_States_government",
+//        "score": 0.08216
+//      },
+//      {
+//        "id": 96,
+//        "label": "Right-libertarianism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Right-libertarianism",
+//        "score": 0.08216,
+//        "wikidataId": "Q250598"
+//      },
+//      {
+//        "id": 97,
+//        "label": "Economic reforms",
+//        "wikiLink": "http://en.wikipedia.org/Category:Economic_reforms",
+//        "score": 0.08144
+//      },
+//      {
+//        "id": 98,
+//        "label": "Independent government agencies",
+//        "wikiLink": "http://en.wikipedia.org/Category:Independent_government_agencies_by_country",
+//        "score": 0.07955
+//      },
+//      {
+//        "id": 99,
+//        "label": "United States presidential Republican Party campaigns",
+//        "wikiLink": "http://en.wikipedia.org/Category:United_States_presidential_Republican_Party_campaigns",
+//        "score": 0.07921
+//      },
+//      {
+//        "id": 100,
+//        "label": "International relations",
+//        "wikiLink": "http://en.wikipedia.org/Category:International_relations",
+//        "score": 0.07899,
+//        "wikidataId": "Q166542"
+//      },
+//      {
+//        "id": 101,
+//        "label": "American political writers",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_political_writers",
+//        "score": 0.07854
+//      },
+//      {
+//        "id": 102,
+//        "label": "Social movements",
+//        "wikiLink": "http://en.wikipedia.org/Category:Social_movements",
+//        "score": 0.07838,
+//        "wikidataId": "Q49773"
+//      },
+//      {
+//        "id": 103,
+//        "label": "Public policy",
+//        "wikiLink": "http://en.wikipedia.org/Category:Public_policy",
+//        "score": 0.07712,
+//        "wikidataId": "Q546113"
+//      },
+//      {
+//        "id": 104,
+//        "label": "American anti–Iraq War activists",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_anti–Iraq_War_activists",
+//        "score": 0.07681
+//      },
+//      {
+//        "id": 105,
+//        "label": "American social sciences writers",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_social_sciences_writers",
+//        "score": 0.07348
+//      },
+//      {
+//        "id": 106,
+//        "label": "Macroeconomics",
+//        "wikiLink": "http://en.wikipedia.org/Category:Macroeconomics",
+//        "score": 0.07339,
+//        "wikidataId": "Q39680"
+//      },
+//      {
+//        "id": 107,
+//        "label": "Activism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Activism",
+//        "score": 0.07292,
+//        "wikidataId": "Q203764"
+//      },
+//      {
+//        "id": 108,
+//        "label": "International finance",
+//        "wikiLink": "http://en.wikipedia.org/Category:International_finance",
+//        "score": 0.07218,
+//        "wikidataId": "Q2048185"
+//      },
+//      {
+//        "id": 109,
+//        "label": "Mises Institute people",
+//        "wikiLink": "http://en.wikipedia.org/Category:Mises_Institute_people",
+//        "score": 0.07189
+//      },
+//      {
+//        "id": 110,
+//        "label": "North American anti-communists",
+//        "wikiLink": "http://en.wikipedia.org/Category:North_American_anti-communists",
+//        "score": 0.07033
+//      },
+//      {
+//        "id": 111,
+//        "label": "Reformers",
+//        "wikiLink": "http://en.wikipedia.org/Category:Reformers",
+//        "score": 0.06881
+//      },
+//      {
+//        "id": 112,
+//        "label": "American anti-communists",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_anti-communists",
+//        "score": 0.06733
+//      },
+//      {
+//        "id": 113,
+//        "label": "Foreign relations of the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Foreign_relations_of_the_United_States",
+//        "score": 0.06708,
+//        "wikidataId": "Q1043394"
+//      },
+//      {
+//        "id": 114,
+//        "label": "Criticisms",
+//        "wikiLink": "http://en.wikipedia.org/Category:Criticisms",
+//        "score": 0.06448,
+//        "wikidataId": "Q3059502"
+//      },
+//      {
+//        "id": 115,
+//        "label": "Mises Institute",
+//        "wikiLink": "http://en.wikipedia.org/Category:Mises_Institute",
+//        "score": 0.06447,
+//        "wikidataId": "Q2457448"
+//      },
+//      {
+//        "id": 116,
+//        "label": "Money",
+//        "wikiLink": "http://en.wikipedia.org/Category:Money",
+//        "score": 0.06334,
+//        "wikidataId": "Q1368"
+//      },
+//      {
+//        "id": 117,
+//        "label": "American Protestants",
+//        "wikiLink": "http://en.wikipedia.org/Category:American_Protestants",
+//        "score": 0.0631
+//      },
+//      {
+//        "id": 118,
+//        "label": "Texas Republicans",
+//        "wikiLink": "http://en.wikipedia.org/Category:Texas_Republicans",
+//        "score": 0.06175
+//      },
+//      {
+//        "id": 119,
+//        "label": "Libertarian theorists",
+//        "wikiLink": "http://en.wikipedia.org/Category:Libertarian_theorists",
+//        "score": 0.05915
+//      },
+//      {
+//        "id": 120,
+//        "label": "Rand Paul",
+//        "wikiLink": "http://en.wikipedia.org/Category:Rand_Paul",
+//        "score": 0.05823,
+//        "wikidataId": "Q463557"
+//      },
+//      {
+//        "id": 121,
+//        "label": "Credit",
+//        "wikiLink": "http://en.wikipedia.org/Category:Credit",
+//        "score": 0.05751,
+//        "wikidataId": "Q182076"
+//      },
+//      {
+//        "id": 122,
+//        "label": "International Democrat Union member parties",
+//        "wikiLink": "http://en.wikipedia.org/Category:International_Democrat_Union_member_parties",
+//        "score": 0.05667
+//      },
+//      {
+//        "id": 123,
+//        "label": "Members of the United States House of Representatives from Texas",
+//        "wikiLink": "http://en.wikipedia.org/Category:Members_of_the_United_States_House_of_Representatives_from_Texas",
+//        "score": 0.05546
+//      },
+//      {
+//        "id": 124,
+//        "label": "International economic organizations",
+//        "wikiLink": "http://en.wikipedia.org/Category:International_economic_organizations",
+//        "score": 0.05525
+//      },
+//      {
+//        "id": 125,
+//        "label": "Finance",
+//        "wikiLink": "http://en.wikipedia.org/Category:Finance",
+//        "score": 0.05499,
+//        "wikidataId": "Q43015"
+//      },
+//      {
+//        "id": 126,
+//        "label": "Libertarian Party (United States) presidential campaigns",
+//        "wikiLink": "http://en.wikipedia.org/Category:Libertarian_Party_(United_States)_presidential_campaigns",
+//        "score": 0.05456
+//      },
+//      {
+//        "id": 127,
+//        "label": "Baptists from the United States",
+//        "wikiLink": "http://en.wikipedia.org/Category:Baptists_from_the_United_States",
+//        "score": 0.05429
+//      },
+//      {
+//        "id": 128,
+//        "label": "Advocates of unschooling and homeschooling",
+//        "wikiLink": "http://en.wikipedia.org/Category:Advocates_of_unschooling_and_homeschooling",
+//        "score": 0.05313
+//      },
+//      {
+//        "id": 129,
+//        "label": "National legislators",
+//        "wikiLink": "http://en.wikipedia.org/Category:National_legislators",
+//        "score": 0.05295
+//      },
+//      {
+//        "id": 130,
+//        "label": "Members of bicameral legislatures",
+//        "wikiLink": "http://en.wikipedia.org/Category:Members_of_bicameral_legislatures",
+//        "score": 0.05203,
+//        "wikidataId": "Q189445"
+//      },
+//      {
+//        "id": 131,
+//        "label": "Liberalism",
+//        "wikiLink": "http://en.wikipedia.org/Category:Liberalism",
+//        "score": 0.05198,
+//        "wikidataId": "Q6216"
+//      },
+//      {
+//        "id": 132,
+//        "label": "Economies",
+//        "wikiLink": "http://en.wikipedia.org/Category:Economies",
+//        "score": 0.05037,
+//        "wikidataId": "Q159810"
+//      }
+//    ],
+//    "entities": [
+//      {
+//        "id": 0,
+//        "type": [
+//          "Agent",
+//          "Person",
+//          "Politician"
+//        ],
+//        "matchingTokens": [
+//          7,
+//          8
+//        ],
+//        "entityId": "Ron Paul",
+//        "freebaseTypes": [
+//          "/military/military_person",
+//          "/music/artist",
+//          "/book/author",
+//          "/government/u_s_congressperson",
+//          "/government/politician",
+//          "/film/person_or_entity_appearing_in_film",
+//          "/music/group_member",
+//          "/tv/tv_program_guest",
+//          "/people/person",
+//          "/influence/influence_node",
+//          "/film/actor",
+//          "/film/film_subject",
+//          "/medicine/physician"
+//        ],
+//        "confidenceScore": 3.806,
+//        "wikiLink": "http://en.wikipedia.org/wiki/Ron_Paul",
+//        "matchedText": "Ron Paul",
+//        "freebaseId": "/m/016lh0",
+//        "relevanceScore": 0.08281,
+//        "entityEnglishId": "Ron Paul",
+//        "startingPos": 36,
+//        "endingPos": 44,
+//        "wikidataId": "Q15257"
+//      },
+//      {
+//        "id": 1,
+//        "matchingTokens": [
+//          1,
+//          2
+//        ],
+//        "entityId": "Federal Reserve",
+//        "freebaseTypes": [
+//          "/business/employer",
+//          "/organization/organization",
+//          "/book/book_subject",
+//          "/government/government_agency"
+//        ],
+//        "confidenceScore": 3.432,
+//        "wikiLink": "http://en.wikipedia.org/wiki/Federal_Reserve",
+//        "matchedText": "Federal Reserve",
+//        "freebaseId": "/m/02xmb",
+//        "relevanceScore": 0.01227,
+//        "entityEnglishId": "Federal Reserve",
+//        "startingPos": 4,
+//        "endingPos": 19,
+//        "wikidataId": "Q53536",
+//        "crunchbaseId": "federal-reserve-board-of-governors",
+//        "permid": "4296937871"
+//      }
+//    ],
+//    "properties": [
+//      {
+//        "id": 0,
+//        "wordPositions": [
+//          0,
+//          1,
+//          2
+//        ],
+//        "propertyPositions": [
+//          3,
+//          4,
+//          5,
+//          6,
+//          7,
+//          8
+//        ]
+//      },
+//      {
+//        "id": 1,
+//        "wordPositions": [
+//          4,
+//          5,
+//          6
+//        ],
+//        "propertyPositions": [
+//          7,
+//          8
+//        ]
+//      }
+//    ]
+//  },
+//  "time": 0.01586,
+//  "ok": true
+//}
+
+
+{
+  "status": "ok",
+  "totalResults": 6,
+  "articles": [
+    {
+      "source": {
+        "id": "ynet",
+        "name": "Ynet"
+      },
+      "author": "ענבר טויזר ויובל קרני",
+      "title": "הפגנה מול מעון רה\"מ: \"יום שחור\"; נתניהו: \"מסע ציד\"",
+      "description": "שיירת רכבים מטעם מפלגת העבודה יצאה לכיוון מעון ראש הממשלה ברחוב בלפור בירושלים על רקע החלטת היועמ\"ש להגיש נגדו כתבי אישום בכפוף לשימוע. \"קוראים לו לא לנהל את הקרב מבית רה\"מ\". במקביל, יצאו גם אנשי רשימת כחול לבן לשטח. נתניהו: \"אל תתנו למסע הציד לבלבל אתכם\"",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-5471946,00.html",
+      "urlToImage": "https://www.ynet.co.il/PicServer5/2019/03/01/9094122/909412101000100640360no.jpg",
+      "publishedAt": "2019-03-01T15:57:00Z",
+      "content": ", ,\r\n2000,1000 -4000, \r\n .\r\n-60 , . 1 , . , .\r\n, -ynet \" . , . , , . \".\r\n : \" , . . . \".\r\n, : \" . - , . ? : . . , , \". \r\n, . \" . , , . : \" , . \".\r\n : \" 40 . , . , . . . , , . , \".\r\n\" , , , ', \" - . \" ."
+    },
+    {
+      "source": {
+        "id": "ynet",
+        "name": "Ynet"
+      },
+      "author": "חדשות",
+      "title": "רחוב עזה בירושלים נפתח לתנועה",
+      "description": "המשטרה פתחה את רחוב עזה בירושלים לתנועה. זאת, לאחר שהסתיימה הפגנה של פעילי מפלגת העבודה שהתקימה מול מעון ראש הממשלה.    (ענבר טויזר)",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-5471951,00.html",
+      "urlToImage": "https://www.ynet.co.il/images/default_ynetLogo200_200.jpg",
+      "publishedAt": "2019-03-01T11:51:35Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "ynet",
+        "name": "Ynet"
+      },
+      "author": "חדשות",
+      "title": "לקראת הפגנה מול בית רה\"מ: המשטרה חסמה את רחוב עזה בי-ם",
+      "description": "המשטרה חסמה את רחוב עזה בירושלים, מחוץ למעון ראש הממשלה,בשל הפגנה של פעילי מפלגת העבודה שמתקיימת במקום. בהפגנה משתתפים כ-60 רכבים שנושאים דגלים שחורים ומסתובבים סביב מעון ראש הממשלה. המפגינים צופרים וקוראים לרה\"מ בנימין נתניהו להתפטר מתפקידו.    (ענבר טויזר)",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-5471944,00.html",
+      "urlToImage": "https://www.ynet.co.il/images/default_ynetLogo200_200.jpg",
+      "publishedAt": "2019-03-01T11:10:57Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "ynet",
+        "name": "Ynet"
+      },
+      "author": "איתי עמיקם",
+      "title": "לא מרפים: הפגנה נוספת של מטופליו של ד\"ר וורטר",
+      "description": "מטופליו של ד\"ר צבי וורטר, רופא המשפחה הוותיק מתל אביב, שפוטר מקופ\"ח מכבי לאחר 26 שנה, הפגינו בשנית נגד הפיטורים. מפגין: \"לא מגיע לנו הסבר מדוע מוותרים על רופא כה מוערך ואהוב?\"",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-5469788,00.html",
+      "urlToImage": "https://www.ynet.co.il/PicServer5/2019/02/13/9061995/9061991398094640360no.jpg",
+      "publishedAt": "2019-02-25T16:25:00Z",
+      "content": ": \r\n\" \r\n . (') , ,\r\n . \r\n . , , 26 , .\r\n. , .\r\n\" . \", , . \" . . . \" , , . ?\", .\r\n\" , \", , \" . . \" . . \".\r\n, \" , : \" . . . . . , \".\r\n, . \" , .\r\n , \" , .\r\n\" \" , , '' \", \" . \" , ' ' . \" . \", .\r\n: \" \" . , . \" \".\r\n ynet \" :"
+    },
+    {
+      "source": {
+        "id": "ynet",
+        "name": "Ynet"
+      },
+      "author": "ynet",
+      "title": "שידור חי: הפגנה נגד האנטישמיות בצרפת",
+      "description": "בפריז מתקיימת הערב עצרת הזדהות עם יהודי צרפת, אחרי גל של אירועים אנטישמיים. הנשיא מקרון ביקר בצהריים בבית העלמין היהודי בשטרסבורג שבו חוללו 80 קברים, והבטיח שצרפת תגיב",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-5466570,00.html",
+      "urlToImage": "https://www.ynet.co.il/PicServer5/2019/02/19/9074569/90745660100791640360no.jpg",
+      "publishedAt": "2019-02-19T18:25:00Z",
+      "content": "( ') , . . . \r\n-80 . . \"\", . \" \", . . \r\n \" \" . \" \" \" \", .\r\n  : -2006, , Juden . , . \r\n , -2018 . 541 2018, 74 2017. \r\ndiv class='findMistakeArticle' id='find_error'&gt; ? \r\n/"
+    },
+    {
+      "source": {
+        "id": "ynet",
+        "name": "Ynet"
+      },
+      "author": "אלישע בן קימון",
+      "title": "המחאה הגזענית והשפלת המנקות בקרני שומרון: \"אמירות חשוכות, התנהגות ההורים מבישה\"",
+      "description": "בעקבות חשיפת ynet שלפיה הורים איימו בשביתה בשל העסקת מנקות ערביות בבית ספר במועצה המקומית - שנכנעה לדרישתם - מתוכננת הפגנה מול המוסד החינוכי. ארגון \"תג מאיר\": \"מדוע קולו של שר החינוך לא נשמע?\". המרכז לנפגעי גזענות: \"המועצה גינתה את ההסתה - אך פיטרה את קורבנות…",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-5464087,00.html",
+      "urlToImage": "https://www.ynet.co.il/PicServer5/2019/02/14/9066448/9066442099892640360no.jpg",
+      "publishedAt": "2019-02-15T11:41:00Z",
+      "content": "(') -ynet \" \" \r\n - . \" \" . \r\n , , , : \" . \". \r\n , . \" \" : \" . : ' '. ?\".\r\n\" \" \" , . . \". \r\n , . , . \r\n , . , , , . \r\n : \", \". : \", - . \". : \" . . . \".\r\n . \" , \", .\r\n , , , .\r\n\" , . , . , \", ."
+    }
+  ]
+}
