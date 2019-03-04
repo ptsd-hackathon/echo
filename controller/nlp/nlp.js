@@ -24,8 +24,8 @@ function getRootOfSentence(content,options) {
 
 }
 
-function getLocationFromMetadata(content,options) {
-    return textRazor.exec(content, options)
+function getLocationFromMetadata(content) {
+    return textRazor.exec(content, this.options)
         .then(value => {
             let mashu = [];
 
@@ -48,6 +48,6 @@ function getLocationFromMetadata(content,options) {
 }
 
 
-getLocationFromMetadata("hello, my name is Tel-Aviv",options).then(answer => {
+getLocationFromMetadata("hello, my name is Tel-Aviv").then(answer => {
     console.log(answer);
 });
