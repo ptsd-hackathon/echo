@@ -17,11 +17,15 @@ const nlp = require('../controller/nlp/nlp');
 const addressConverter_1 = require("./addressConverter/addressConverter");
 const GpsUser_1 = require("./dal/entities/GpsUser");
 const EventUser_1 = __importDefault(require("./dal/entities/EventUser"));
+const PollNewsGps_1 = __importDefault(require("./gpsUserPol/PollNewsGps"));
 class echo {
     constructor() {
         this.app = express_1.default();
         mongoose_1.default.connect(config.mongo, { useNewUrlParser: true });
         this.initSchema();
+        console.log("hello");
+        new PollNewsGps_1.default(30000);
+        console.log("fsdsado");
     }
     initSchema() {
     }
@@ -53,10 +57,10 @@ class echo {
             var textToTranslate, translatedText;
             news.EveryArticle(NEWS_CONSTS.fromDate, NEWS_CONSTS.toDate, NEWS_CONSTS.language, NEWS_CONSTS.sources, NEWS_CONSTS.sortBy, next => {
                 textToTranslate = news.ReturnedContent(next);
-                console.log(textToTranslate);
+                // console.log(textToTranslate);
                 translator.TranslateHeToEn(textToTranslate, (translatorErr, translatorRes, translatorBody) => {
                     translatedText = (JSON.parse(translatorBody).text[0]);
-                    console.log(translatedText);
+                    // console.log(translatedText)
                     nlp.GetLocationFromMetadata(translatedText, value => {
                         let mashu = [];
                         for (let i = 0; i < value.response.entities.length; i++) {
@@ -64,7 +68,7 @@ class echo {
                                 mashu.push(value.response.entities[i].entityId);
                             }
                         }
-                        console.log(mashu);
+                        // console.log(mashu);
                         res.send(mashu);
                     });
                 });
