@@ -31,7 +31,7 @@ app.get("/newsJson", function(req, res){
                     //     mashu.push(value.response.sentences[i].words[j].token);
                     // }
 
-                    if(value.response.entities[i].type && value.response.entities[i].type.indexOf("Company") > -1){
+                    if(value.response.entities[i].type && value.response.entities[i].type.indexOf("Place") > -1){
                         mashu.push(value.response.entities[i].entityId);
                     }
                     // }
