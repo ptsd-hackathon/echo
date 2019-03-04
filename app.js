@@ -20,7 +20,6 @@ app.get("/newsJson", function(req, res){
         translator.TranslateHeToEn(textToTranslate, (translatorErr, translatorRes, translatorBody) => {
             res.send((JSON.parse(translatorBody).text[0]));
         });
-
         }
     );
 

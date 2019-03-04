@@ -1,5 +1,6 @@
 const KEY_API = require('../../data-const/post-consts').KEY_API_NEWS;
 const HOST = require('../../data-const/post-consts').HOST_NEWS;
+const NEWS_CONSTS = require('../../data-const/news-consts');
 
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI(KEY_API);
