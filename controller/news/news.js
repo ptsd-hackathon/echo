@@ -19,7 +19,11 @@ function TopHeadlines(category, language, country, callback){
  * @return {string}
  */
 function ReturnedContent(response) {
-    return response.articles[0].title + " " + response.articles[0].description + '\n'
+    let concArticles = "";
+    response.articles.forEach(function(entry) {
+        concArticles+= "\n\n"+entry.title+"\n"+entry.description
+    })
+    return concArticles;//response.articles[0].title + " " + response.articles[0].description + '\n'
 }
 
 function EveryArticle(fromDate, toDate, language, sources, sortBy, callback){
