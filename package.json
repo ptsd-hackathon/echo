@@ -13,6 +13,7 @@
     "express": "^4.16.4",
     "newsapi": "^2.4.0",
     "request": "^2.88.0",
+    "textrazor": "^2.1.0",
     "thesaurus-com": "^1.2.1"
   }
 }
