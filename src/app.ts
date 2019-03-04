@@ -8,13 +8,16 @@ import bodyParser from "body-parser";
 import { getAddresFromCity } from './addressConverter/addressConverter'
 import { GpsUser } from './dal/entities/GpsUser';
 import EventUser from './dal/entities/EventUser';
+import PollNewsGps from './pollNewsGps/pollNewsGps';
 
 export class echo {
     app: any = express();
-
+    
     constructor() {
         mongoose.connect(config.mongo, { useNewUrlParser: true });
         this.initSchema();
+        new PollNewsGps(1000);
+        console.log("Server up");
     }
 
     initSchema() {

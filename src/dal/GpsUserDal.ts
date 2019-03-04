@@ -17,5 +17,9 @@ export default class GpsUserDal{
         });
     }
 
+    public getGpsUsers(callback: any) : void{
+        GpsUserModel.find({}, callback);
+    }
+
     
 }

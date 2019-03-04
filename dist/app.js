@@ -12,11 +12,14 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const addressConverter_1 = require("./addressConverter/addressConverter");
 const GpsUser_1 = require("./dal/entities/GpsUser");
 const EventUser_1 = __importDefault(require("./dal/entities/EventUser"));
+const pollNewsGps_1 = __importDefault(require("./pollNewsGps/pollNewsGps"));
 class echo {
     constructor() {
         this.app = express_1.default();
         mongoose_1.default.connect(config.mongo, { useNewUrlParser: true });
         this.initSchema();
+        new pollNewsGps_1.default(1000);
+        console.log("Server up");
     }
     initSchema() {
     }
