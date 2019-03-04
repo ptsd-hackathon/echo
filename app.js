@@ -18,9 +18,27 @@ app.get("/newsJson", function(req, res){
     var textToTranslate, translatedText;
     news.EveryArticle(NEWS_CONSTS.fromDate, NEWS_CONSTS.toDate, NEWS_CONSTS.language, NEWS_CONSTS.sources, NEWS_CONSTS.sortBy, next => {
         textToTranslate = news.ReturnedContent(next);
+        console.log(textToTranslate);
         translator.TranslateHeToEn(textToTranslate, (translatorErr, translatorRes, translatorBody) => {
             translatedText = (JSON.parse(translatorBody).text[0]);
-            res.send(nlp.GetLocationFromMetadata(translatedText));
+            console.log(translatedText)
+            nlp.GetLocationFromMetadata(translatedText,value => {
+                let mashu = []
+                for(let i = 0; i < value.response.entities.length; i++){
+                    // for(let j=0; j<value.response.entities[i].type.length;j++){
+                    //     let relationToParent = value.response.sentences[i].words[j]
+                    // if(value.response.entities[i].type.indexOf("Place") > -1){
+                    //     mashu.push(value.response.sentences[i].words[j].token);
+                    // }
+
+                    if(value.response.entities[i].type && value.response.entities[i].type.indexOf("Company") > -1){
+                        mashu.push(value.response.entities[i].entityId);
+                    }
+                    // }
+                }
+                console.log(mashu);
+                res.send(mashu);
+            });
         });
 
         }

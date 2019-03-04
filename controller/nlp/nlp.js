@@ -24,31 +24,15 @@ function getRootOfSentence(content,options) {
 
 }
 
-function GetLocationFromMetadata(content) {
+function GetLocationFromMetadata(content,callback) {
+    let mashu = [];
     return textRazor.exec(content, this.options)
-        .then(value => {
-            let mashu = [];
-
-            for(let i = 0; i < value.response.entities.length; i++){
-                // for(let j=0; j<value.response.entities[i].type.length;j++){
-                //     let relationToParent = value.response.sentences[i].words[j]
-                    // if(value.response.entities[i].type.indexOf("Place") > -1){
-                    //     mashu.push(value.response.sentences[i].words[j].token);
-                    // }
-                    if(value.response.entities[i].type.indexOf("Place") > -1){
-                        mashu.push(value.response.entities[i].entityId);
-                    }
-                // }
-            }
-
-            return mashu;
-
-        })
+        .then(callback)
         .catch(err => console.error(err))
 }
 
 module.exports = {GetLocationFromMetadata};
 
-// getLocationFromMetadata("hello, my name is Tel-Aviv").then(answer => {
+// GetLocationFromMetadata("hello, my name is Tel-Aviv").then(answer => {
 //     console.log(answer);
 // });

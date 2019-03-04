@@ -29,8 +29,8 @@ function ReturnedContent(response) {
 function EveryArticle(fromDate, toDate, language, sources, sortBy, callback){
     return newsapi.v2.everything({
         sources: sources,
-        from: fromDate,
-        to: toDate,
+        // from: fromDate,
+        // to: toDate,
         language: language,
         sortBy: sortBy,
     }).then(callback);
